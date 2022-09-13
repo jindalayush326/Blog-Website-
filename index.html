@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Developer Student Club AKGEC</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+      :root {
+        --Playfair: "Playfair Display", serif;
+        --Quicksand: "Quicksand", sans-serif;
+        --Roboto: "Roboto", sans-serif;
+        --dark: black;
+        --exDark: white;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: var(--Quicksand);
+      }
+
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+      body {
+        line-height: 1.4;
+        color: var(--dark);
+      }
+      img {
+        width: 100%;
+        display: block;
+      }
+      .container {
+        max-width: 1320px;
+        margin: 0 auto;
+        padding: 0 1.2rem;
+      }
+      header {
+        min-height: 100vh;
+        background: url(https://yt3.ggpht.com/kFPlztJoybyeyFYMpIiqB5tH-jvP5FgTCIAVBEOvGavFfJq3ALi9Icq8O-HDXip50HO_-e9N=s900-c-k-c0x00ffffff-no-rj)
+           no-repeat fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+      }
+      .navbar {
+        padding: 1.2rem;
+        background: black;
+      }
+      .nav {
+        color: white;
+        font-size: 2rem;
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        font-family: var(--Playfair);
+        letter-spacing: 1px;
+      }
+      .navb {
+        padding: 0.8rem 0 0.2rem 0;
+        text-align: center;
+      }
+      .navb a {
+        text-transform: uppercase;
+        font-family: var(--Roboto);
+        letter-spacing: 1px;
+        font-weight: 500;
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        padding: 0.4rem 0.1rem;
+        letter-spacing: 3px;
+        transition: opacity 0.5s ease;
+      }
+      .navb a:hover {
+        opacity: 0.7;
+      }
+      .banner{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: Black;
+}
+.banner-title{
+    font-size: 3rem;
+    font-family: var(--Playfair);
+    line-height: 1.2;
+}
+.banner-title span{
+    font-family: var(--Playfair);
+    color: var(--exDark);
+}
+.banner p{
+    padding: 1rem 0 2rem 0;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-family: var(--Roboto);
+    font-weight: 300;
+    word-spacing: 2px;
+}
+.banner form{
+    background: white;
+    border-radius: 2rem;
+    padding: 0.6rem 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.Search{
+    font-family: var(--Roboto);
+    font-size: 1.1rem;
+    width: 100%;
+    outline: 0;
+    padding: 0.6rem 0;
+    border: none;
+}
+.Search:placeholder{
+    text-transform: capitalize;
+}
+.search{
+    width: 40px;
+    font-size: 1.1rem;
+    color: var(--dark);
+    border: none;
+    background: transparent;
+    outline: 0;
+    cursor: pointer;
+}
+.club{
+    padding: 4.5rem 0;
+}
+.title{
+    text-align: center;
+    padding: 1rem 0;
+}
+.title h2{
+    font-family: var(--Playfair);
+    font-size: 2.4rem;
+}
+.title p{
+    text-transform: uppercase;
+    padding: 0.6rem 0;
+}
+.club-content{
+    margin: 2rem 0;
+}
+.machine-item{
+    cursor: pointer;
+    margin: 1.5rem 0;
+}
+.machine-img{
+    position: relative;
+    overflow: hidden;
+}
+.machine-img::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.-img img{
+    transition:  all 0.5s ease;
+}
+.machine-item:hover img{
+    transform: scale(1.2);
+}
+
+.machine-title{
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+.machine-title a{
+    color: var(--dark);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: var(--Playfair);
+}
+.app-item{
+    cursor: pointer;
+    margin: 1.5rem 0;
+}
+.app-img{
+    position: relative;
+    overflow: hidden;
+}
+.app-img::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.-img img{
+    transition:  all 0.5s ease;
+}
+.app-item:hover img{
+    transform: scale(1.2);
+}
+
+.app-title{
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+.app-title a{
+    color: var(--dark);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: var(--Playfair);
+}
+.web-item{
+    cursor: pointer;
+    margin: 1.5rem 0;
+}
+.web-img{
+    position: relative;
+    overflow: hidden;
+}
+.web-img::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.-img img{
+    transition:  all 0.5s ease;
+}
+.web-item:hover img{
+    transform: scale(1.2);
+}
+
+.web-title{
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+.web-title a{
+    color: var(--dark);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: var(--Playfair);
+}
+.Management-item{
+    cursor: pointer;
+    margin: 1.5rem 0;
+}
+.Management-img{
+    position: relative;
+    overflow: hidden;
+}
+.Management-img::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.-img img{
+    transition:  all 0.5s ease;
+}
+.Management-item:hover img{
+    transform: scale(1.2);
+}
+
+.Management-title{
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+.Management-title a{
+    color: var(--dark);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: var(--Playfair);
+}
+.ui-item{
+    cursor: pointer;
+    margin: 1.5rem 0;
+}
+.ui-img{
+    position: relative;
+    overflow: hidden;
+}
+.ui-img::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.-img img{
+    transition:  all 0.5s ease;
+}
+.ui-item:hover img{
+    transform: scale(1.2);
+}
+
+.ui-title{
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+}
+.ui-title a{
+    color: var(--dark);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: var(--Playfair);
+}
+/* blog */
+.blog{
+    background: whitesmoke;
+    padding: 4.5rem 0;
+}
+.blog-content{
+    margin: 2rem 0;
+}
+.blog-img{
+    position: relative;
+}
+.blog-img span{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: var(--exDark);
+    color: white;
+    font-size: 1.4rem;
+    padding: 0.3rem 0.6rem;
+}
+.blog-text{
+    margin: 2.2rem 0;
+    padding: 0 1rem;
+}
+.blog-text span{
+    font-weight: 300;
+    display: block;
+    padding-bottom: 0.5rem;
+}
+.blog-text h2{
+    font-family: var(--Playfair);
+    padding: 1rem 0;
+    font-size: 1.65rem;
+    font-weight: 500;
+}
+.blog-text p{
+    font-weight: 300;
+    font-size: 1.1rem;
+    opacity: 0.9;
+    padding-bottom: 1.2rem;
+}
+.blog-text a{
+    font-family: var(--Roboto);
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: var(--dark);
+    display: inline-block;
+    background: var(--dark);
+    color: white;
+    padding: 0.55rem 1.2rem;
+    transition: all 0.5s ease;
+}
+.blog-text a:hover{
+    background: var(--exDark);
+}
+/* about */
+.about{
+    padding: 4.5rem 0;
+}
+.about-text{
+    margin: 2rem 0;
+}
+.about-text > p{
+    font-size: 1.1rem;
+    padding: 0.6rem 0;
+    opacity: 0.8;
+}
+footer{
+    background: var(--exDark);
+    color: black;
+    text-align: center;
+    padding: 2rem 0;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.4rem;
+}
+.social-links a{
+    border: 2px solid black;
+    color: blue;
+    display: block;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 0 0.3rem;
+    transition: all 0.5s ease;
+}
+
+.social-links a:hover{
+    background: black;
+    color: var(--exDark);
+}
+.footer span{
+    margin-top: 1rem;
+    display: block;
+    font-family: var(--Playfair);
+    letter-spacing: 2px;
+}
+
+
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <a href="index.html" class="nav"
+            >Google Developer Student Club AKGEC</a
+          >
+          <div class="navb">
+            <a href="Home">Home</a>
+            <a href="About">About</a>
+            <a href="Blog">Blog</a>
+            <a href="Contact">Contact</a>
+          </div>
+        </div>
+      </nav>
+      <div class="banner">
+        <div class="container">
+          <h1>GDSC Club</h1>
+          <p>Everything you want to know about this club</p>
+          <form action="form.php">
+            <input type="text" class="Search" placeholder="Find your Domain" />
+            <button type="submit" class="search">
+                <i class = "fas fa-search"></i>
+
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <main>
+        <section class = "club" id = "club">
+            <div class = "container">
+              <div class = "title">
+                <h2>Various Fields</h2>
+                <p>Various Fields on the blog</p>
+              </div>
+      
+              <div class = "club-content">
+                <div class = "machine-item">
+                  <div class = "machine-img">
+                    <img src = "data:image/png;base64,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" alt = "">
+                    <span><i class = "far fa-heart"></i> 22</span>
+                    <span>Machine Learning</span>
+                  </div>
+                  <div class = "machine-title">
+                    <a href = "#">Learn Machine Learnig Right Now</a>
+                  </div>
+                </div>
+                <div class = "web-item">
+                    <div class = "web-img">
+                      <img src = "https://dscakgec.org/static/media/showcaseImage.4a5c74d8bfca7ac0327313c2b342cd7f.svg" alt = "">
+                      <span><i class = "far fa-heart"></i> 22</span>
+                      <span>Web Development</span>
+                    </div>
+                    <div class = "web-title">
+                      <a href = "#">Learn Web Development Right Now</a>
+                    </div>
+                  </div>
+                  <div class = "app-item">
+                    <div class = "app-img">
+                      <img src = "https://user-images.githubusercontent.com/60147732/152080775-1c069915-9e32-4aa4-84db-128ed5ff1d9a.png" alt = "">
+                      <span><i class = "far fa-heart"></i> 22</span>
+                      <span>App Development</span>
+                    </div>
+                    <div class = "app-title">
+                      <a href = "#">Learn App Development Right Now</a>
+                    </div>
+                  </div>
+                  <div class = "Management-item">
+                    <div class = "Management-img">
+                      <img src = "https://dscakgec.org/static/media/projects.3fb6d686660bcf4252a8.png" alt = "">
+                      <span><i class = "far fa-heart"></i> 22</span>
+                      <span>Management</span>
+                    </div>
+                    <div class = "Management-title">
+                      <a href = "#">Learn Management Right Now</a>
+                    </div>
+                  </div>
+                  <div class = "ui-item">
+                    <div class = "ui-img">
+                      <img src = "https://dscakgec.org/static/media/team.d94b8c69b2cc855a39bb.png" alt = "">
+                      <span><i class = "far fa-heart"></i> 22</span>
+                      <span>UI UX Design</span>
+                    </div>
+                    <div class = "ui-title">
+                      <a href = "#">Learn UI UX Designing Right Now</a>
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+            </section>
+            <!-- blog -->
+            <section class = "blog" id = "blog">
+              <div class = "container">
+                <div class = "title">
+                  <h2>Latest Blog</h2>
+                  <p>recent blogs about technical society</p>
+                </div>
+                <div class = "blog-content">
+                  <div class = "blog-item">
+                    <div class = "blog-img">
+                      <img src = "https://dscakgec.org/static/media/webevent.5960a7d3106c907d846d.png" alt = "">
+                      <span><i class = "far fa-heart"></i></span>
+                    </div>
+                    <div class = "blog-text">
+                      <span>13 September, 2022</span>
+                      <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex expedita minima accusantium at obcaecati sapiente perferendis, nisi odio amet consectetur voluptate temporibus nesciunt ducimus, neque quis voluptas quo exercitationem. Quod!</p>
+                      <a href = "#">Read More</a>
+                    </div>
+                  </div>
+                  <div class = "blog-item">
+                    <div class = "blog-img">
+                      <img src = "https://dscakgec.org/static/media/mlevent.e268039247baa33feaca.jpg" alt = "">
+                      <span><i class = "far fa-heart"></i></span>
+                    </div>
+                    <div class = "blog-text">
+                      <span>12 September, 2022</span>
+                      <h2>Lorem ipsum dolor sit amet .</h2>
+                      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo incidunt quos maiores nostrum. Pariatur dicta ducimus voluptatem exercitationem deserunt, distinctio ipsam, excepturi nostrum dolore cupiditate praesentium laudantium quas dolorum similique.</p>
+                      <a href = "#">Read More</a>
+                    </div>
+                  </div>
+                  <div class = "blog-item">
+                    <div class = "blog-img">
+                      <img src = "https://pbs.twimg.com/media/FMOGAGcVEAMGv4c.jpg" alt = "">
+                      <span><i class = "far fa-heart"></i></span>
+                    </div>
+                    <div class = "blog-text">
+                      <span>11 September, 2022</span>
+                      <h2>Lorem</h2>
+                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus praesentium nostrum blanditiis, nam vitae obcaecati corporis laborum veniam quaerat, consectetur ullam dolor, explicabo vel. Repellendus quas officiis iusto obcaecati praesentium..</p>
+                      <a href = "#">Read More</a>
+                    </div>
+                  </div>                
+                </div>
+              </div>
+            </section>
+            <!-- about -->
+              <section class = "about" id = "about">
+                <div class = "container">
+                  <div class = "about-content">
+                    <div>
+                      <img src = "https://dscakgec.org/static/media/ASJ.392c99800a9bf47bb57f.jpg" alt = "">
+                    </div>
+                    <div class = "about-text">
+                      <div class = "title">
+                        <h2>Google Developer Student Club</h2>
+                        <p>Coding make  life better</p>
+                      </div>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id totam voluptatem saepe eius ipsum nam provident sapiente, natus et vel eligendi laboriosam odit eos temporibus impedit veritatis ut, illo deserunt illum voluptate quis beatae quod. Necessitatibus provident dicta consectetur labore!</p>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam corrupti natus, eos quia recusandae voluptatem veniam modi officiis minima provident rem sint porro fuga quos tempora ea suscipit vero velit sed laudantium eaque necessitatibus maxime!</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <footer>
+                <div class = "social-links">
+                  <a href = "https://dscakgec.org"><i class = "fab fa-google-g"></i></a>
+                  <a href = "https://in.linkedin.com/company/google-developer-student-club-akgec"><i class = "fab fa-linkedin"></i></a>
+                  <a href = "https://www.instagram.com/gdsc_akgec/"><i class = "fab fa-instagram"></i></a>
+                  
+                </div>
+                <span>GDSC Blog Page</span>
+              </footer>
+            
+    </main>
+  </body>
+</html>
